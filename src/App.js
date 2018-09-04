@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Square from './components/Square/Square';
-import Knight from './components/Knight/Knight';
+import Board from './components/Board/Board';
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Square black>
-          <Knight />
-        </Square>
+       <Board knightPosition={[0,0]} />
       </div>
     );
   }

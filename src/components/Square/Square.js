@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 class Square extends Component {
     render() {
         const { black } = this.props;
+        console.log("is black: ", black);
         const fill = black ? 'black' : 'white';
         const stroke = black ? 'white' : 'black';
         return (
