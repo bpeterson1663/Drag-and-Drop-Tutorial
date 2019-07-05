@@ -1,8 +1,7 @@
 import React from 'react';
 
-const knight = () => (
-    <span>♘</span>
-);
+const Knight = () => {
+    return <span>♘</span>
+};
 
-
-export default knight;
+export default Knight;

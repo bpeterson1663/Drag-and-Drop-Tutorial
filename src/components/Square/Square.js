@@ -1,27 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-class Square extends Component {
-    render() {
-        const { black } = this.props;
-        console.log("is black: ", black);
-        const fill = black ? 'black' : 'white';
-        const stroke = black ? 'white' : 'black';
-        return (
-            <div style={{ 
-                        backgroundColor: fill, 
-                        height: '100%',
-                        width: '100%',
-                        color: stroke
-                     }}>
-                {this.props.children}
-            </div>
-        );
-    }
-}
-
-Square.propTypes = {
-    black: PropTypes.bool
+const Square = ({black, children}) => {
+    const fill = black ? 'black' : 'white';
+    const stroke = black ? 'white' : black;
+    return (
+        <div style={{
+            backgroundColor: fill,
+            width: '100%',
+            height: '100%',
+            color: stroke 
+        }} >
+            {children}    
+        </div>
+    )
 };
 
 export default Square;
